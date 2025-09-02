@@ -12,7 +12,7 @@ const tl = gsap.timeline();
 
 tl.to(".loading", {
     width: "100%",
-    duration: 0.9,
+    duration: 1.9,
     delay: 0.3,
 })
 .to(".capsuleLogo", {
@@ -37,3 +37,16 @@ const tl1 = gsap.timeline({
 tl1.to("#bgImage", {
     transform: "scale(1.1)",
 });
+
+const tl2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page2",
+        start: "28% 70%",
+        end: "100% 70%",
+        markers: true,
+        scrub: 1,
+    }
+})
+tl2.to(".page2 .bottom", {
+    y: "700",
+})
