@@ -43,7 +43,7 @@ const tl2 = gsap.timeline({
         trigger: ".page2",
         start: "28% 70%",
         end: "100% 70%",
-        markers: true,
+        // markers: true,
         scrub: 1,
     }
 })
