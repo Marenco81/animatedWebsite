@@ -50,3 +50,17 @@ const tl2 = gsap.timeline({
 tl2.to(".page2 .bottom", {
     y: "700",
 })
+
+const tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page3",
+        start: "30% 50%",
+        end: "60% 50%",
+        scrub: 1,
+        // markers: true,
+    }
+})
+tl3.to(".page3 .hide", {
+    top: "-100%",
+    sttager: 0.1,
+})
