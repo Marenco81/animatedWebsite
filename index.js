@@ -64,3 +64,21 @@ tl3.to(".page3 .hide", {
     top: "-100%",
     sttager: 0.1,
 })
+
+const tl4 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".page4",
+        start: "30% 30%",
+        end: "220% 30%",
+        markers: true,
+        scrub: true,
+        pin: true,
+    }
+});
+
+tl4.to(".page4 .background", {
+    width: "calc(100vw - 1rem)",
+    height: "calc(100vh - 1rem)",
+    borderRadius: "3.5rem",
+    y: -40,
+})

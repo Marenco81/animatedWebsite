@@ -306,3 +306,39 @@ button{
 .page4 .background img{
     transform: scale(1.3);
 }
+
+.topText,
+.bottomText{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.bottomText{
+    top: 90%;
+}
+
+h4, h3{
+    position: relative;
+}
+
+.topText h4{
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.topText h3{
+    font-size: 3rem;
+}
+
+.bottomText h3{
+    width: 30%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 3rem;
+}
