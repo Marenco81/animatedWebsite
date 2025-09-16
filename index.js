@@ -70,8 +70,8 @@ const tl4 = gsap.timeline({
         trigger: ".page4",
         start: "30% 30%",
         end: "190% 30%",
-        markers: true,
-        scrub: true,
+        // markers: true,
+        scrub: 1,
         pin: true,
     }
 });
@@ -90,5 +90,46 @@ tl4.to(".box h3", {
 }, "a")
 .from(".background .topText h4, .background .topText h3, .background .bottomText h3", {
     opacity: 0,
-    text: 50,
+    x: 50,
 })
+
+tl4.to({}, {
+    duration:0.4
+}, "+=0")
+.to("#second", {
+    transform: "translate(-50%, -56%)",
+}, "b")
+.to("#second img", {
+    transform: "scale(1)",
+}, "b")
+.to(".page4 .background", {
+    scale: 0.9,
+    opacity: 0,
+    y: -50,
+}, "b")
+.from("#second .topText h4, #second .topText h3, #second .bottomText h3", {
+    opacity: 0,
+    x: 50
+})
+
+tl4.to({}, {
+    duration:0.4
+}, "+=0")
+.to("#third", {
+    transform: "translate(-50%, -56%)",
+}, "c")
+.to("#third img", {
+    transform: "scale(1)",
+}, "c")
+.to("#second", {
+    scale: 0.9,
+    opacity: 0,
+}, "c")
+.from("#third .topText h4, #third .topText h3, #third .bottomText h3", {
+    opacity: 0,
+    x: 50
+})
+
+tl4.to({}, {
+    duration:0.4
+}, "+=0")
