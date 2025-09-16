@@ -69,16 +69,26 @@ const tl4 = gsap.timeline({
     scrollTrigger: {
         trigger: ".page4",
         start: "30% 30%",
-        end: "220% 30%",
+        end: "190% 30%",
         markers: true,
         scrub: true,
         pin: true,
     }
 });
 
-tl4.to(".page4 .background", {
+tl4.to(".box h3", {
+    opacity: 0,
+}, "a")
+.to(".page4 .background", {
     width: "calc(100vw - 1rem)",
     height: "calc(100vh - 1rem)",
     borderRadius: "3.5rem",
     y: -40,
+}, "a")
+.to(".page4 .background img", {
+    transform: "scale(1)",
+}, "a")
+.from(".background .topText h4, .background .topText h3, .background .bottomText h3", {
+    opacity: 0,
+    text: 50,
 })
